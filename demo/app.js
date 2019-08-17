@@ -10,11 +10,11 @@ function App () {
       <Slider
         width={800}
       >
-        <img src='./images/sample_image.jpg' height='200px' />
-        <img src='./images/sample_image2.jpg' height='200px' />
-        <img src='./images/sample_image3.jpg' height='200px' />
-        <img src='./images/sample_image.jpg' height='200px' />
-        <img src='./images/sample_image2.jpg' height='200px' />
+        <img src='images/sample_image.jpg' height='200px' />
+        <img src='images/sample_image2.jpg' height='200px' />
+        <img src='images/sample_image3.jpg' height='200px' />
+        <img src='images/sample_image.jpg' height='200px' />
+        <img src='images/sample_image2.jpg' height='200px' />
       </Slider>
 
       <h4>with Prev, Next</h4>
@@ -25,11 +25,11 @@ function App () {
         onClickPrevButton={() => console.log('prev')}
         onClickNextButton={() => console.log('next')}
       >
-        <img src='./images/sample_image.jpg' height='200px' />
-        <img src='./images/sample_image2.jpg' height='200px' />
-        <img src='./images/sample_image3.jpg' height='200px' />
-        <img src='./images/sample_image.jpg' height='200px' />
-        <img src='./images/sample_image2.jpg' height='200px' />
+        <img src='images/sample_image.jpg' height='200px' />
+        <img src='images/sample_image2.jpg' height='200px' />
+        <img src='images/sample_image3.jpg' height='200px' />
+        <img src='images/sample_image.jpg' height='200px' />
+        <img src='images/sample_image2.jpg' height='200px' />
       </Slider>
     </>
   )
