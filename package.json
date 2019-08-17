@@ -1,14 +1,19 @@
 {
-  "name": "simple-react-slider",
+  "name": "@noguzo/simple-react-slider",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "author": "Akinori Noguchi <gbl.6sep@gmail.com>",
   "license": "MIT",
   "scripts": {
     "demo-build": "webpack --mode production",
     "deploy": "gh-pages -d demo/dist",
     "start": "webpack-dev-server",
-    "publish": "yarn run demo-build && yarn run deploy"
+    "publish": "yarn run demo-build && yarn run deploy",
+    "prepublishOnly": "webpack --config webpack.dist.config.js --mode production"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "dependencies": {
     "react": "^16.8.6",
