@@ -1,6 +1,6 @@
 {
   "name": "@noguzo/simple-react-slider",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "main": "dist/bundle.js",
   "author": "Akinori Noguchi <gbl.6sep@gmail.com>",
   "license": "MIT",
