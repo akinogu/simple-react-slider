@@ -2,7 +2,16 @@ import React, { useState } from 'react'
 import classnames from 'classnames'
 import styles from './styles.scss'
 
-function Slider ({
+interface Props {
+  width: string,
+  itemWidth: number,
+  lastDisplayItemCounts: number,
+  type: string,
+  onClickPrevButton: (e: Event) => void,
+  onClickNextButton: (e: Event) => void
+}
+
+const Slider: React.FC<Props> = ({
   width = '100%',
   itemWidth = 200,
   lastDisplayItemCounts = 1,
@@ -10,7 +19,7 @@ function Slider ({
   onClickPrevButton,
   onClickNextButton,
   children
-}) {
+}) => {
   const [visibleFirstItemIndex, setVisibleFirstItemIndex] = useState(0)
   const sliderItems = (
     <div
@@ -39,7 +48,7 @@ function Slider ({
       {sliderItems}
       {onClickNextButton &&
         <button className={styles.nextButton} onClick={(e) => {
-          if ((children.length - visibleFirstItemIndex) < lastDisplayItemCounts + 1) return
+          if ((React.Children.count(children) - visibleFirstItemIndex) < lastDisplayItemCounts + 1) return
           setVisibleFirstItemIndex(visibleFirstItemIndex + 1)
           onClickNextButton(e)
         }} />

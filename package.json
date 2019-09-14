@@ -1,6 +1,6 @@
 {
   "name": "@noguzo/simple-react-slider",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "main": "dist/bundle.js",
   "author": "Akinori Noguchi <gbl.6sep@gmail.com>",
   "license": "MIT",
@@ -12,7 +12,8 @@
     "demo-build": "webpack --mode production",
     "deploy": "gh-pages -d demo/dist",
     "start": "webpack-dev-server",
-    "publish": "yarn run demo-build && yarn run deploy",
+    "publish": "yarn demo-build && yarn deploy",
+    "build": "tsc && mv ./dist/*.d.ts ./ && webpack --config webpack.dist.config.js",
     "prepublishOnly": "webpack --config webpack.dist.config.js --mode production"
   },
   "peerDependencies": {
@@ -28,6 +29,9 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.2",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "classnames": "^2.2.6",
@@ -39,6 +43,7 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^1.0.0",
+    "typescript": "^3.6.3",
     "url-loader": "^2.1.0",
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6",

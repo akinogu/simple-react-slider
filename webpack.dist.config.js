@@ -3,21 +3,21 @@ const path = require('path');
 module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'index.js',
     libraryTarget: 'umd',
     libraryExport: 'default'
   },
 
-  entry: './src/index.js',
+  entry: './src/index.tsx',
 
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.ts', '.tsx', '.js'],
     modules: [path.join(__dirname, 'node_modules')]
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|tsx?)$/,
         exclude: [/node_modules/],
         use: 'babel-loader'
       },
